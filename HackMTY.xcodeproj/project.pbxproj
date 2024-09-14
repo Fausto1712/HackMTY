@@ -18,6 +18,10 @@
 		5791A0B12C961D600065C39E /* chatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5791A0B02C961D600065C39E /* chatView.swift */; };
 		5791A0B32C961DD50065C39E /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5791A0B22C961DD50065C39E /* UserSettings.swift */; };
 		5791A0B62C96338B0065C39E /* HeaderAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5791A0B52C96338B0065C39E /* HeaderAppView.swift */; };
+		5791A0B92C963AD20065C39E /* SwifDataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5791A0B82C963AD20065C39E /* SwifDataModels.swift */; };
+		5791A0BB2C963B120065C39E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5791A0BA2C963B120065C39E /* Extensions.swift */; };
+		5791A0BD2C963D120065C39E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5791A0BC2C963D120065C39E /* LocationManager.swift */; };
+		5791A0BF2C963DAF0065C39E /* DonutChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5791A0BE2C963DAF0065C39E /* DonutChartModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		5791A0B02C961D600065C39E /* chatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatView.swift; sourceTree = "<group>"; };
 		5791A0B22C961DD50065C39E /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		5791A0B52C96338B0065C39E /* HeaderAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderAppView.swift; sourceTree = "<group>"; };
+		5791A0B82C963AD20065C39E /* SwifDataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwifDataModels.swift; sourceTree = "<group>"; };
+		5791A0BA2C963B120065C39E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5791A0BC2C963D120065C39E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		5791A0BE2C963DAF0065C39E /* DonutChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChartModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,9 @@
 			children = (
 				5791A0A82C961C150065C39E /* Router.swift */,
 				5791A0B22C961DD50065C39E /* UserSettings.swift */,
+				5791A0B82C963AD20065C39E /* SwifDataModels.swift */,
+				5791A0BA2C963B120065C39E /* Extensions.swift */,
+				5791A0BC2C963D120065C39E /* LocationManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -108,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				5791A0B52C96338B0065C39E /* HeaderAppView.swift */,
+				5791A0BE2C963DAF0065C39E /* DonutChartModel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -186,10 +198,14 @@
 				5791A0992C961A530065C39E /* ContentView.swift in Sources */,
 				5791A0AF2C961D4A0065C39E /* mainView.swift in Sources */,
 				5791A0AD2C961D2C0065C39E /* onBoardingView.swift in Sources */,
+				5791A0B92C963AD20065C39E /* SwifDataModels.swift in Sources */,
 				5791A0B32C961DD50065C39E /* UserSettings.swift in Sources */,
 				5791A0B12C961D600065C39E /* chatView.swift in Sources */,
+				5791A0BF2C963DAF0065C39E /* DonutChartModel.swift in Sources */,
 				5791A0B62C96338B0065C39E /* HeaderAppView.swift in Sources */,
+				5791A0BD2C963D120065C39E /* LocationManager.swift in Sources */,
 				5791A0AB2C961D170065C39E /* profileView.swift in Sources */,
+				5791A0BB2C963B120065C39E /* Extensions.swift in Sources */,
 				5791A0972C961A530065C39E /* HackMTYApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

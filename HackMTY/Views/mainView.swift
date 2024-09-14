@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct mainView: View {
     @EnvironmentObject var router: Router
     @StateObject var userModel = UserSettings()
+    @Environment(\.modelContext) private var modelContext
     
     var body: some View {
         VStack{

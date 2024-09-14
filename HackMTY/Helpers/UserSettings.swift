@@ -13,6 +13,8 @@ final class UserSettings: ObservableObject {
     @Published var lastName: String { didSet { UserDefaults.standard.set(lastName, forKey: "lastname") } }
     @Published var sex: String { didSet { UserDefaults.standard.set(sex, forKey: "sex") } }
     @Published var address: String { didSet { UserDefaults.standard.set(address, forKey: "address") } }
+    @Published var country: String { didSet { UserDefaults.standard.set(country, forKey: "country") } }
+    @Published var creditBuro: Bool { didSet { UserDefaults.standard.set(creditBuro, forKey: "creditBuro") } }
     @Published var latitude: Int { didSet { UserDefaults.standard.set(latitude, forKey: "latitude") } }
     @Published var longitude: Int { didSet { UserDefaults.standard.set(longitude, forKey: "longitude") } }
     @Published var phoneNumb: Int { didSet { UserDefaults.standard.set(phoneNumb, forKey: "phoneNumb") } }
@@ -33,6 +35,8 @@ final class UserSettings: ObservableObject {
         self.lastName = UserDefaults.standard.string(forKey: "lastname") ?? ""
         self.sex = UserDefaults.standard.string(forKey: "sex") ?? ""
         self.address = UserDefaults.standard.string(forKey: "address") ?? ""
+        self.country = UserDefaults.standard.string(forKey: "country") ?? ""
+        self.creditBuro = UserDefaults.standard.bool(forKey: "creditBuro")
         self.latitude = UserDefaults.standard.integer(forKey: "latitude")
         self.longitude = UserDefaults.standard.integer(forKey: "longitude")
         self.phoneNumb = UserDefaults.standard.integer(forKey: "phoneNumb")
