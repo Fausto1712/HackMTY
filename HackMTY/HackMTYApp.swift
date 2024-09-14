@@ -10,23 +10,35 @@ import SwiftData
 
 @main
 struct HackMTYApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
+    @ObservedObject var router = Router()
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack(path: $router.navPath) {
+                ContentView()
+                    .navigationDestination(for: Router.Destination.self) { destination in
+                        switch destination {
+                            //On boarding Screens
+                        case .onboarding:
+                            onBoardingView()
+                            
+                            //Main app
+                        case .contentView:
+                            ContentView()
+                        case .mainScreen:
+                            mainView()
+                            
+                            //Chat screen
+                        case .chatBot:
+                            chatView()
+                            
+                            //userSettings
+                        case .usersettings:
+                            profileView()
+                        }
+                    }
+            }
         }
-        .modelContainer(sharedModelContainer)
+        .environmentObject(router)
     }
 }

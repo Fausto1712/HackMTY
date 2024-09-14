@@ -9,18 +9,28 @@
 /* Begin PBXBuildFile section */
 		5791A0972C961A530065C39E /* HackMTYApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5791A0962C961A530065C39E /* HackMTYApp.swift */; };
 		5791A0992C961A530065C39E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5791A0982C961A530065C39E /* ContentView.swift */; };
-		5791A09B2C961A530065C39E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5791A09A2C961A530065C39E /* Item.swift */; };
 		5791A09D2C961A540065C39E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5791A09C2C961A540065C39E /* Assets.xcassets */; };
 		5791A0A02C961A540065C39E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5791A09F2C961A540065C39E /* Preview Assets.xcassets */; };
+		5791A0A92C961C150065C39E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5791A0A82C961C150065C39E /* Router.swift */; };
+		5791A0AB2C961D170065C39E /* profileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5791A0AA2C961D170065C39E /* profileView.swift */; };
+		5791A0AD2C961D2C0065C39E /* onBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5791A0AC2C961D2C0065C39E /* onBoardingView.swift */; };
+		5791A0AF2C961D4A0065C39E /* mainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5791A0AE2C961D4A0065C39E /* mainView.swift */; };
+		5791A0B12C961D600065C39E /* chatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5791A0B02C961D600065C39E /* chatView.swift */; };
+		5791A0B32C961DD50065C39E /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5791A0B22C961DD50065C39E /* UserSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5791A0932C961A530065C39E /* HackMTY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackMTY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5791A0962C961A530065C39E /* HackMTYApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackMTYApp.swift; sourceTree = "<group>"; };
 		5791A0982C961A530065C39E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		5791A09A2C961A530065C39E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		5791A09C2C961A540065C39E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5791A09F2C961A540065C39E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5791A0A82C961C150065C39E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		5791A0AA2C961D170065C39E /* profileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileView.swift; sourceTree = "<group>"; };
+		5791A0AC2C961D2C0065C39E /* onBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoardingView.swift; sourceTree = "<group>"; };
+		5791A0AE2C961D4A0065C39E /* mainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainView.swift; sourceTree = "<group>"; };
+		5791A0B02C961D600065C39E /* chatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatView.swift; sourceTree = "<group>"; };
+		5791A0B22C961DD50065C39E /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +63,10 @@
 		5791A0952C961A530065C39E /* HackMTY */ = {
 			isa = PBXGroup;
 			children = (
+				5791A0A72C961BF70065C39E /* Helpers */,
+				5791A0A62C961BEF0065C39E /* Views */,
 				5791A0962C961A530065C39E /* HackMTYApp.swift */,
 				5791A0982C961A530065C39E /* ContentView.swift */,
-				5791A09A2C961A530065C39E /* Item.swift */,
 				5791A09C2C961A540065C39E /* Assets.xcassets */,
 				5791A09E2C961A540065C39E /* Preview Content */,
 			);
@@ -68,6 +79,26 @@
 				5791A09F2C961A540065C39E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5791A0A62C961BEF0065C39E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5791A0AA2C961D170065C39E /* profileView.swift */,
+				5791A0AC2C961D2C0065C39E /* onBoardingView.swift */,
+				5791A0AE2C961D4A0065C39E /* mainView.swift */,
+				5791A0B02C961D600065C39E /* chatView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5791A0A72C961BF70065C39E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5791A0A82C961C150065C39E /* Router.swift */,
+				5791A0B22C961DD50065C39E /* UserSettings.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,8 +171,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5791A0A92C961C150065C39E /* Router.swift in Sources */,
 				5791A0992C961A530065C39E /* ContentView.swift in Sources */,
-				5791A09B2C961A530065C39E /* Item.swift in Sources */,
+				5791A0AF2C961D4A0065C39E /* mainView.swift in Sources */,
+				5791A0AD2C961D2C0065C39E /* onBoardingView.swift in Sources */,
+				5791A0B32C961DD50065C39E /* UserSettings.swift in Sources */,
+				5791A0B12C961D600065C39E /* chatView.swift in Sources */,
+				5791A0AB2C961D170065C39E /* profileView.swift in Sources */,
 				5791A0972C961A530065C39E /* HackMTYApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
