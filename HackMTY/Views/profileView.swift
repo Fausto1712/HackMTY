@@ -10,6 +10,7 @@ import SwiftUI
 struct profileView: View {
     @StateObject var userModel = UserSettings()
     @EnvironmentObject var router: Router
+    @AppStorage("isOnboardingCompleted") var isOnboardingCompleted: Bool = false
     
     var body: some View {
         HStack(spacing: 50){
@@ -23,8 +24,15 @@ struct profileView: View {
                 Text(userModel.username)
                 
                 Text("Email: ")
-                Text(userModel.username)
+                Text(userModel.email)
             }
+        }
+        
+        Button {
+            isOnboardingCompleted = false
+            router.navigate(to: .contentView)
+        } label: {
+            Text("Log Out")
         }
     }
 }

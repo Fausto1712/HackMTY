@@ -9,9 +9,14 @@ import SwiftUI
 
 struct mainView: View {
     @EnvironmentObject var router: Router
+    @StateObject var userModel = UserSettings()
     
     var body: some View {
-        Text("Main View")
+        VStack{
+            HeaderAppView(headerText: "\(NSLocalizedString("Hello", comment: "")), \(userModel.username)!")
+            Spacer()
+            Text("Main View")
+        }
     }
 }
 

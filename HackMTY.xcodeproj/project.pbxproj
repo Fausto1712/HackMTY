@@ -17,6 +17,7 @@
 		5791A0AF2C961D4A0065C39E /* mainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5791A0AE2C961D4A0065C39E /* mainView.swift */; };
 		5791A0B12C961D600065C39E /* chatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5791A0B02C961D600065C39E /* chatView.swift */; };
 		5791A0B32C961DD50065C39E /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5791A0B22C961DD50065C39E /* UserSettings.swift */; };
+		5791A0B62C96338B0065C39E /* HeaderAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5791A0B52C96338B0065C39E /* HeaderAppView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		5791A0AE2C961D4A0065C39E /* mainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainView.swift; sourceTree = "<group>"; };
 		5791A0B02C961D600065C39E /* chatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatView.swift; sourceTree = "<group>"; };
 		5791A0B22C961DD50065C39E /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		5791A0B52C96338B0065C39E /* HeaderAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderAppView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		5791A0952C961A530065C39E /* HackMTY */ = {
 			isa = PBXGroup;
 			children = (
+				5791A0B42C96337B0065C39E /* Components */,
 				5791A0A72C961BF70065C39E /* Helpers */,
 				5791A0A62C961BEF0065C39E /* Views */,
 				5791A0962C961A530065C39E /* HackMTYApp.swift */,
@@ -99,6 +102,14 @@
 				5791A0B22C961DD50065C39E /* UserSettings.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5791A0B42C96337B0065C39E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5791A0B52C96338B0065C39E /* HeaderAppView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +188,7 @@
 				5791A0AD2C961D2C0065C39E /* onBoardingView.swift in Sources */,
 				5791A0B32C961DD50065C39E /* UserSettings.swift in Sources */,
 				5791A0B12C961D600065C39E /* chatView.swift in Sources */,
+				5791A0B62C96338B0065C39E /* HeaderAppView.swift in Sources */,
 				5791A0AB2C961D170065C39E /* profileView.swift in Sources */,
 				5791A0972C961A530065C39E /* HackMTYApp.swift in Sources */,
 			);

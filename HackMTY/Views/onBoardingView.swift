@@ -15,13 +15,16 @@ struct onBoardingView: View {
     @EnvironmentObject var router: Router
     
     var body: some View {
-        Text("On boarding")
-        Button {
-            isOnboardingCompleted = validInfo()
-            router.navigate(to: .contentView)
-        } label: {
-            Text("Complete Onboarding")
+        VStack{
+            Text("On boarding")
+            Button {
+                isOnboardingCompleted = validInfo()
+                router.navigate(to: .contentView)
+            } label: {
+                Text("Complete Onboarding")
+            }
         }
+        .navigationBarBackButtonHidden(true)
     }
     
     func validInfo() -> Bool {
