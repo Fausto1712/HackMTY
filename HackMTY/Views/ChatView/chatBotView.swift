@@ -17,7 +17,7 @@ struct chatBotView: View {
     @State private var chatBotTitle: String = ""
     @State private var messagePlaceHolder: String = ""
     @State private var nivelDeRiesgo: String = ""
-    @State var userData = ""
+    @State private var userData = ""
     
     var chatBot: Int
     

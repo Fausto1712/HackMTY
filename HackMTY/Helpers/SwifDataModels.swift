@@ -29,22 +29,16 @@ final class Expense : Identifiable {
     }
 }
 
-struct Category {
+struct Category: Identifiable {
     var id: UUID
-    var color: String
-    var opacity: Double
-    var budgetLimit: Double
-    var currentExpense: Double
+    var color: Color
     var chartValue: CGFloat
     var name: String
     
-    init(color: String,opacity: Double, budgetLimit: Double, currentExpense: Double, name: String) {
+    init(color: Color, chartValue: CGFloat, name: String) {
         self.id = UUID()
         self.color = color
-        self.opacity = opacity
-        self.budgetLimit = budgetLimit
-        self.currentExpense = currentExpense
-        self.chartValue = CGFloat(currentExpense)
+        self.chartValue = chartValue
         self.name = name
     }
 }
