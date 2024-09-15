@@ -1,12 +1,47 @@
-//
-//  onBoarding.swift
-//  HackMTY
-//
-//  Created by Fausto Pinto Cabrera on 14/09/24.
-//
-
 import SwiftUI
 import SwiftData
+
+// Custom NavBar View
+struct CustomNavBarView: View {
+    @Binding var currentStep: Int  // Paso actual que controla la navegación
+
+    var body: some View {
+        VStack {
+            // Custom NavBar
+            HStack {
+                // Botón de retroceso solo si no estamos en el primer paso
+                if currentStep > 1 {
+                    Button(action: {
+                        if currentStep > 1 {
+                            currentStep -= 1  // Resta uno al contador de pasos
+                        }
+                    }) {
+                        Image(systemName: "chevron.left")
+                            .foregroundColor(.red)
+                            .font(.system(size: 20, weight: .bold))
+                    }
+                }
+                Spacer()
+
+                // Imagen y Texto en el centro
+                HStack(spacing: 8) {
+                    Image(uiImage: UIImage(named: "B")!) // Asegúrate de agregar la imagen en tus Assets
+                        .resizable()
+                        .frame(width: 28, height: 18)
+                    Text("BANORTE")
+                        .font(.custom("Poppins-Bold", size: 18))
+                        .foregroundColor(.red)
+                }
+                .padding(.trailing, 16)
+
+                // Placeholder para el espaciado del lado derecho
+                Spacer(minLength: 44)
+            }
+            .padding(.horizontal)
+            .frame(height: 44)
+        }
+    }
+}
 
 struct onBoardingView: View {
     @Environment(\.modelContext) private var modelContext
@@ -17,19 +52,68 @@ struct onBoardingView: View {
     @AppStorage("isOnboardingCompleted") var isOnboardingCompleted: Bool = false
     
     @StateObject var userModel = UserSettings()
-    
+    @State private var currentStep: Int = 1  // Controla el flujo de pantallas
+
     var body: some View {
-        VStack{
-            Text("On boarding")
-            Button {
-                isOnboardingCompleted = validInfo()
-                router.navigate(to: .contentView)
-            } label: {
-                Text("Complete Onboarding")
+        NavigationStack {
+            VStack {
+                // Custom NavBar
+                if currentStep > 1 {
+                    CustomNavBarView(currentStep: $currentStep)
+                }
+
+                Spacer()
+
+                // Control del flujo de pantallas
+                switch currentStep {
+                case 1:
+                    BienvenidaView(currentStep: $currentStep)  // Paso 1
+                case 2:
+                    TelefonoView(currentStep: $currentStep)  // Paso 2
+                case 3:
+                    TelefonoPinView(currentStep: $currentStep)  // Paso 3
+                case 4:
+                    PaisResidenciaView(currentStep: $currentStep)  // Paso 4
+                case 5:
+                    DatosPersonalesView(currentStep: $currentStep)  // Paso 5
+                case 6:
+                    SubirDocumentoView(currentStep: $currentStep)  // Paso 6
+                case 7:
+                    EscaneoDocumentoView(currentStep: $currentStep)  // Paso 7
+                case 8:
+                    UnaPreguntaView(currentStep: $currentStep)  // Paso 8
+                case 9:
+                    TarjetaIdealView(currentStep: $currentStep)  // Paso 9
+                case 10:
+                    SeguridadView(currentStep: $currentStep)  // Paso 10
+                default:
+                    BienvenidaDosView(currentStep: $currentStep )  // Default case
+                }
+
+                Spacer()
+
+                // Botón Siguiente para finalizar el flujo en la última pantalla
+                if currentStep == 10 {
+                    Button(action: {
+                        // Acción para finalizar el onboarding
+                        isOnboardingCompleted = validInfo()
+                        router.navigate(to: .contentView)
+                    }) {
+                        Text("Finalizar")
+                            .font(.figtree(size: 17, weight: .medium))
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.red)
+                            .cornerRadius(24)
+                    }
+                    .padding(.horizontal)
+                }
             }
+            .navigationBarBackButtonHidden(true)
         }
-        .navigationBarBackButtonHidden(true)
     }
+    
     
     func validInfo() -> Bool {
         userModel.username = "Fausto"
@@ -68,3 +152,4 @@ struct onBoardingView: View {
 #Preview {
     onBoardingView()
 }
+
