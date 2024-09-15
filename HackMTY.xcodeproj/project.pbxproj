@@ -27,6 +27,10 @@
 		57E8390D2C96AC4C00767052 /* ExpenseMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E8390C2C96AC4C00767052 /* ExpenseMapView.swift */; };
 		57E8390F2C96ADBB00767052 /* GastosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E8390E2C96ADBB00767052 /* GastosView.swift */; };
 		57E839112C96BDB400767052 /* chatBotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E839102C96BDB400767052 /* chatBotView.swift */; };
+		7B92DEE22C96CD5200BB84D8 /* Figtree.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B92DEE12C96CD5100BB84D8 /* Figtree.ttf */; };
+		7B92DEE62C96CEFD00BB84D8 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92DEE52C96CEFD00BB84D8 /* Components.swift */; };
+		7B92DEE92C96D02500BB84D8 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B92DEE72C96D02500BB84D8 /* Poppins-SemiBold.ttf */; };
+		7B92DEEA2C96D02500BB84D8 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B92DEE82C96D02500BB84D8 /* Poppins-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +55,11 @@
 		57E8390C2C96AC4C00767052 /* ExpenseMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseMapView.swift; sourceTree = "<group>"; };
 		57E8390E2C96ADBB00767052 /* GastosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosView.swift; sourceTree = "<group>"; };
 		57E839102C96BDB400767052 /* chatBotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatBotView.swift; sourceTree = "<group>"; };
+		7B92DEE12C96CD5100BB84D8 /* Figtree.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Figtree.ttf; sourceTree = "<group>"; };
+		7B92DEE32C96CDED00BB84D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7B92DEE52C96CEFD00BB84D8 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		7B92DEE72C96D02500BB84D8 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		7B92DEE82C96D02500BB84D8 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +92,7 @@
 		5791A0952C961A530065C39E /* HackMTY */ = {
 			isa = PBXGroup;
 			children = (
+				7B92DEE32C96CDED00BB84D8 /* Info.plist */,
 				5791A0B42C96337B0065C39E /* Components */,
 				5791A0A72C961BF70065C39E /* Helpers */,
 				5791A0A62C961BEF0065C39E /* Views */,
@@ -108,7 +118,7 @@
 				57E839082C968AC300767052 /* Home */,
 				5791A0C02C964BA90065C39E /* ChatView */,
 				5791A0AA2C961D170065C39E /* profileView.swift */,
-				5791A0AC2C961D2C0065C39E /* onBoardingView.swift */,
+				7B92DEE42C96CEEC00BB84D8 /* OnBoardingComponents */,
 				57E8390E2C96ADBB00767052 /* GastosView.swift */,
 			);
 			path = Views;
@@ -122,6 +132,9 @@
 				5791A0B82C963AD20065C39E /* SwifDataModels.swift */,
 				5791A0BA2C963B120065C39E /* Extensions.swift */,
 				5791A0BC2C963D120065C39E /* LocationManager.swift */,
+				7B92DEE12C96CD5100BB84D8 /* Figtree.ttf */,
+				7B92DEE82C96D02500BB84D8 /* Poppins-Bold.ttf */,
+				7B92DEE72C96D02500BB84D8 /* Poppins-SemiBold.ttf */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -161,6 +174,15 @@
 				57E8390C2C96AC4C00767052 /* ExpenseMapView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		7B92DEE42C96CEEC00BB84D8 /* OnBoardingComponents */ = {
+			isa = PBXGroup;
+			children = (
+				7B92DEE52C96CEFD00BB84D8 /* Components.swift */,
+				5791A0AC2C961D2C0065C39E /* onBoardingView.swift */,
+			);
+			path = OnBoardingComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,7 +244,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5791A0A02C961A540065C39E /* Preview Assets.xcassets in Resources */,
+				7B92DEE92C96D02500BB84D8 /* Poppins-SemiBold.ttf in Resources */,
+				7B92DEEA2C96D02500BB84D8 /* Poppins-Bold.ttf in Resources */,
 				5791A09D2C961A540065C39E /* Assets.xcassets in Resources */,
+				7B92DEE22C96CD5200BB84D8 /* Figtree.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57E8390D2C96AC4C00767052 /* ExpenseMapView.swift in Sources */,
+				7B92DEE62C96CEFD00BB84D8 /* Components.swift in Sources */,
 				57E8390B2C968AEA00767052 /* TarjetasView.swift in Sources */,
 				57E8390F2C96ADBB00767052 /* GastosView.swift in Sources */,
 				5791A0A92C961C150065C39E /* Router.swift in Sources */,
@@ -387,11 +413,13 @@
 				DEVELOPMENT_TEAM = XCBZ99XZXM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HackMTY/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -420,11 +448,13 @@
 				DEVELOPMENT_TEAM = XCBZ99XZXM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HackMTY/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
