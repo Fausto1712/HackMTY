@@ -17,6 +17,8 @@ struct GastosView: View {
     @StateObject var userModel = UserSettings()
     
     @State var selectedDonutName: String = "Touch a category"
+    @State var selectedDonutValue: String = ""
+    @State var totalExpenses: Double = 0.00
     @State private var transactions = ""
     @State private var userData = ""
     @State private var alertMessage = ""
@@ -36,8 +38,11 @@ struct GastosView: View {
                 DonutChart(dataModel: ChartDataModel.init(dataModel: categories), onTap: {
                     dataModel in
                     if let dataModel = dataModel {
+                        selectedDonutValue = "\(String(format: "%.2f", dataModel.chartValue * totalExpenses))$"
                         selectedDonutName = "\(dataModel.name)"
+                        
                     } else {
+                        selectedDonutValue = "\(String(format: "%.2f", totalExpenses))$"
                         selectedDonutName = "Touch a category"
                     }
                 })
@@ -45,6 +50,9 @@ struct GastosView: View {
                 .padding()
                 
                 VStack{
+                    Text(selectedDonutValue)
+                        .font(.title)
+                        .multilineTextAlignment(.center)
                     Text(selectedDonutName)
                         .font(.title3)
                         .foregroundStyle(.gray)
@@ -88,6 +96,7 @@ struct GastosView: View {
         
         for expense in expenses {
             transactions = transactions + "\(expense.title): \(expense.amount), "
+            totalExpenses =  totalExpenses + expense.amount
         }
         
         userData = "Nombre: \(userModel.username), Apellido: \(userModel.lastName), Sueldo: \(userModel.sueldo), Sexo: \(userModel.sex), Pais de residencia: \(userModel.country), EstadoCivil: \(userModel.estadoCivil), Ocupacion: \(userModel.ocupation), Cumpleaños: \(userModel.birthday)"
