@@ -20,10 +20,16 @@ struct ContentView: View {
                         Label("Main", systemImage: "house.fill")
                     }
                 
+                GastosView()
+                    .tabItem {
+                        Label("Cuentas", systemImage: "field.of.view.ultrawide")
+                    }
+                
                 chatView()
                     .tabItem {
-                        Label("Chat Bot", systemImage: "party.popper")
+                        Label("Chat Bot", systemImage: "bubble")
                     }
+
             }
             .navigationBarBackButtonHidden(true)
         } else {

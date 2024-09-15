@@ -8,16 +8,19 @@ import SwiftUI
 
 final class Router: ObservableObject {
 
-    public enum Destination: Codable, Hashable {
+    public enum Destination: Hashable {
         //On boarding Screens
         case onboarding
         
         //Main app
         case contentView
         case mainScreen
+        case cuentasView
+        case mapView(expense: Expense)
         
         //Chat screen
-        case chatBot
+        case chatView
+        case chatBotView(chatBot: Int)
         
         //userSettings
         case usersettings

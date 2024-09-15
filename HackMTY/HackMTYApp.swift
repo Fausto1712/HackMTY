@@ -15,17 +15,16 @@ struct HackMTYApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Expense.self,
-            Category.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
+        
         do {
             return try ModelContainer(for: schema, configurations: [modelConfiguration])
         } catch {
             fatalError("Could not create ModelContainer: \(error)")
         }
     }()
-
+    
     var body: some Scene {
         WindowGroup {
             NavigationStack(path: $router.navPath) {
@@ -41,10 +40,16 @@ struct HackMTYApp: App {
                             ContentView()
                         case .mainScreen:
                             mainView()
+                        case .cuentasView:
+                            cuentasView()
+                        case .mapView(let expense):
+                            ExpenseMapView(expense: expense)
                             
                             //Chat screen
-                        case .chatBot:
+                        case .chatView:
                             chatView()
+                        case .chatBotView(let chatBot):
+                            chatBotView(chatBot: chatBot)
                             
                             //userSettings
                         case .usersettings:
