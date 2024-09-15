@@ -154,6 +154,7 @@ struct GastosView: View {
             
             Spacer()
         }
+        .scrollIndicators(.hidden)
         .onAppear { if categories.isEmpty{ fetchData()} }
         .onChange(of: selectedSegment){
             if selectedDonutName != "Toca una categoria" {
@@ -164,9 +165,6 @@ struct GastosView: View {
             if selectedDonutName != "Toca una categoria" {
                 sendFormData()
             }
-        }
-        .alert(isPresented: $showAlert) {
-            Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
         }
     }
     

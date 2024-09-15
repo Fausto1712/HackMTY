@@ -27,11 +27,11 @@
 		57E8390D2C96AC4C00767052 /* ExpenseMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E8390C2C96AC4C00767052 /* ExpenseMapView.swift */; };
 		57E8390F2C96ADBB00767052 /* GastosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E8390E2C96ADBB00767052 /* GastosView.swift */; };
 		57E839112C96BDB400767052 /* chatBotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E839102C96BDB400767052 /* chatBotView.swift */; };
+		57E839132C96F49100767052 /* DonutChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E839122C96F49100767052 /* DonutChart.swift */; };
 		7B92DEE22C96CD5200BB84D8 /* Figtree.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B92DEE12C96CD5100BB84D8 /* Figtree.ttf */; };
 		7B92DEE62C96CEFD00BB84D8 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92DEE52C96CEFD00BB84D8 /* Components.swift */; };
 		7B92DEE92C96D02500BB84D8 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B92DEE72C96D02500BB84D8 /* Poppins-SemiBold.ttf */; };
 		7B92DEEA2C96D02500BB84D8 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B92DEE82C96D02500BB84D8 /* Poppins-Bold.ttf */; };
-		57E839132C96F49100767052 /* DonutChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E839122C96F49100767052 /* DonutChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,12 +56,12 @@
 		57E8390C2C96AC4C00767052 /* ExpenseMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseMapView.swift; sourceTree = "<group>"; };
 		57E8390E2C96ADBB00767052 /* GastosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosView.swift; sourceTree = "<group>"; };
 		57E839102C96BDB400767052 /* chatBotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatBotView.swift; sourceTree = "<group>"; };
+		57E839122C96F49100767052 /* DonutChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChart.swift; sourceTree = "<group>"; };
 		7B92DEE12C96CD5100BB84D8 /* Figtree.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Figtree.ttf; sourceTree = "<group>"; };
 		7B92DEE32C96CDED00BB84D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7B92DEE52C96CEFD00BB84D8 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		7B92DEE72C96D02500BB84D8 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		7B92DEE82C96D02500BB84D8 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
-		57E839122C96F49100767052 /* DonutChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -421,8 +421,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,8 +456,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -58,6 +58,7 @@ struct TarjetasView: View {
                 expenseReading(expense: expense)
             }
         }
+        .scrollIndicators(.hidden)
     }
 }
 

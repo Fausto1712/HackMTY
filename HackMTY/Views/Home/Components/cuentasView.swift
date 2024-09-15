@@ -85,6 +85,7 @@ struct cuentasView: View {
             .padding(.top)
             .padding(.horizontal)
         }
+        .scrollIndicators(.hidden)
     }
 }
 

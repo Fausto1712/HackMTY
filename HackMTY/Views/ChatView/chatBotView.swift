@@ -116,9 +116,6 @@ struct chatBotView: View {
                 chatMessages.append("Server: ¡Hola! Dime como te puedo asistir 😎.")
             }
         }
-        .alert(isPresented: $showAlert) {
-            Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
-        }
     }
     
     func sendFormData() {
