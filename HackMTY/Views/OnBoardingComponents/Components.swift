@@ -938,11 +938,13 @@ struct TarjetaIdealView: View {
             
             // Tarjeta correspondiente a la categoría seleccionada
             RoundedRectangle(cornerRadius: 10)
-                .fill(Color.gray.opacity(0.3))  // Tarjeta Placeholder
                 .frame(height: 200)
+                .background(.white)
                 .overlay(
                     tarjetaView(for: selectedCategory)
                         .padding()
+                        .scaledToFill()
+                        .background(.white)
                 )
                 .padding(.vertical, 16)
             
@@ -978,24 +980,19 @@ struct TarjetaIdealView: View {
     }
     
     // Tarjeta correspondiente a la categoría seleccionada
-    func tarjetaView(for category: String) -> some View {
+    func tarjetaView(for category: String) -> Image {
         switch category {
         case "Clásica":
-            return Text("Tarjeta Clásica Placeholder")
-                .foregroundColor(.gray)
-                .font(.figtree(size: 20, weight: .regular))
+            return Image("Card3")
+                .resizable()
         case "Por Ti":
-            return Text("Tarjeta Por Ti Placeholder")
-                .foregroundColor(.gray)
-                .font(.figtree(size: 20, weight: .regular))
+            return Image("Card1")  // Imagen para tarjeta Por Ti
+                .resizable()
         case "Mujeres":
-            return Text("Tarjeta Mujeres Placeholder")
-                .foregroundColor(.gray)
-                .font(.figtree(size: 20, weight: .regular))
+            return Image("Card2")  // Imagen para tarjeta Mujeres
+                .resizable()
         default:
-            return Text("Tarjeta Placeholder")
-                .foregroundColor(.gray)
-                .font(.figtree(size: 20, weight: .regular))
+            return Image(systemName: "Card3")  // Imagen por defecto si no hay categoría seleccionada
         }
     }
     
@@ -1330,4 +1327,9 @@ struct BienvenidaDosView: View {
         .padding()
         .navigationBarTitleDisplayMode(.inline)
     }
+}
+
+
+#Preview{
+    TarjetaIdealView(currentStep: .constant(9))
 }
