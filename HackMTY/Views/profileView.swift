@@ -22,9 +22,6 @@ struct profileView: View {
             VStack(alignment: .leading){
                 Text("User: ")
                 Text(userModel.username)
-                
-                Text("Email: ")
-                Text(userModel.email)
             }
         }
         
