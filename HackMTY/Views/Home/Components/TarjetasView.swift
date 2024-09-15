@@ -11,9 +11,9 @@ import SwiftData
 struct TarjetasView: View {
     @Environment(\.modelContext) private var modelContext
     
-    @EnvironmentObject var router: Router
-    
     @Query private var expenses: [Expense]
+    
+    @EnvironmentObject var router: Router
     
     @Binding var cardIndex: Int
     

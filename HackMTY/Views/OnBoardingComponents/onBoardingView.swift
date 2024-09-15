@@ -116,9 +116,17 @@ struct onBoardingView: View {
     
     
     func validInfo() -> Bool {
-        userModel.username = "Fausto Pinto"
-        userModel.email = "fausto.pintocabrera@gmail.com"
-        userModel.picture = "person2"
+        userModel.username = "Fausto"
+        userModel.picture = "person1"
+        userModel.lastName = "Pinto Cabrera"
+        userModel.sex = "Male"
+        userModel.sueldo = "12000"
+        userModel.country = "Mexico"
+        userModel.creditBuro = false
+        userModel.estadoCivil = "Soltero"
+        userModel.ocupation = "Practicante"
+        userModel.birthday = "17/12/2001"
+        
         if expenses.isEmpty{
             modelContext.insert(Expense(id: 0, date: "14/05/2024", amount: -84, category: "Movimiento Banorte", coordinates: [25.652500562449028, -100.28999620365188], summary: "Compra de un café", title: "Starbuck Tecnologico"))
             modelContext.insert(Expense(id: 1, date: "15/05/2024", amount: -150, category: "Restaurante", coordinates: [25.686614, -100.316113], summary: "Cena en restaurante", title: "La Nacional"))

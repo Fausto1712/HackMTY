@@ -31,6 +31,7 @@
 		7B92DEE62C96CEFD00BB84D8 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92DEE52C96CEFD00BB84D8 /* Components.swift */; };
 		7B92DEE92C96D02500BB84D8 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B92DEE72C96D02500BB84D8 /* Poppins-SemiBold.ttf */; };
 		7B92DEEA2C96D02500BB84D8 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B92DEE82C96D02500BB84D8 /* Poppins-Bold.ttf */; };
+		57E839132C96F49100767052 /* DonutChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E839122C96F49100767052 /* DonutChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		7B92DEE52C96CEFD00BB84D8 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		7B92DEE72C96D02500BB84D8 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		7B92DEE82C96D02500BB84D8 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		57E839122C96F49100767052 /* DonutChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			children = (
 				5791A0B52C96338B0065C39E /* HeaderAppView.swift */,
 				5791A0BE2C963DAF0065C39E /* DonutChartModel.swift */,
+				57E839122C96F49100767052 /* DonutChart.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				57E8390F2C96ADBB00767052 /* GastosView.swift in Sources */,
 				5791A0A92C961C150065C39E /* Router.swift in Sources */,
 				5791A0992C961A530065C39E /* ContentView.swift in Sources */,
+				57E839132C96F49100767052 /* DonutChart.swift in Sources */,
 				57E839072C9683E100767052 /* cuentasView.swift in Sources */,
 				5791A0AF2C961D4A0065C39E /* mainView.swift in Sources */,
 				5791A0AD2C961D2C0065C39E /* onBoardingView.swift in Sources */,

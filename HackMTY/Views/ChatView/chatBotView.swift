@@ -9,15 +9,17 @@ import SwiftUI
 
 struct chatBotView: View {
     @StateObject var userModel = UserSettings()
+    
     @State private var prompt: String = ""
     @State private var chatMessages: [String] = []
     @State private var showAlert = false
     @State private var alertMessage = ""
     @State private var chatBotTitle: String = ""
     @State private var messagePlaceHolder: String = ""
-    var chatBot: Int
+    @State private var nivelDeRiesgo: String = ""
+    @State private var userData = ""
     
-    let userData = "Nacionalidad: Mexicano, Nombre: Fausto, Edad: 24, Sueldo: 12,000"
+    var chatBot: Int
     
     var body: some View {
         VStack {
@@ -30,7 +32,7 @@ struct chatBotView: View {
                         if message.hasPrefix("User:") {
                             Text(message.replacingOccurrences(of: "User: ", with: ""))
                                 .padding()
-                                .background(Color.blue.opacity(0.1))
+                                .background(Color.vibrantRed.opacity(0.1))
                                 .cornerRadius(10)
                                 .frame(maxWidth: .infinity, alignment: .trailing)
                         } else if message.hasPrefix("Server:") {
@@ -46,14 +48,36 @@ struct chatBotView: View {
             }
             .padding()
             
+            if chatBot == 1 {
+                Divider()
+                
+                HStack{
+                    Text("Nivel de ")
+                        .foregroundColor(.black)
+                        .font(.system(size: 17))
+                        .fontWeight(.semibold) +
+                    Text("Riesgo")
+                        .foregroundColor(.red)
+                        .font(.system(size: 17))
+                        .fontWeight(.semibold)
+                    Spacer()
+                }
+                .padding(.top)
+                .padding(.horizontal)
+                
+                HStack {
+                    riskButton(nivelDeRiesgo: $nivelDeRiesgo, riesgo: "BAJO")
+                    riskButton(nivelDeRiesgo: $nivelDeRiesgo, riesgo: "MEDIO")
+                    riskButton(nivelDeRiesgo: $nivelDeRiesgo, riesgo: "ALTO")
+                }
+                .padding(.vertical, 5)
+            }
+            
             HStack {
                 TextField(messagePlaceHolder, text: $prompt)
-                    .font(.system(size: 17))
                     .padding(10)
-                    .padding(.horizontal,15)
-                    .background(RoundedRectangle(cornerRadius: 34).background(.gray.opacity(0.2)))
+                    .background(.gray.opacity(0.2))
                     .clipShape(RoundedRectangle(cornerRadius: 34))
-                    .foregroundStyle(.clear)
                 
                 Button{
                     sendFormData()
@@ -70,17 +94,22 @@ struct chatBotView: View {
                 .padding(.vertical, 5)
             }
             .padding(.horizontal)
+            
         }
         .navigationBarBackButtonHidden()
         .onAppear{
+            userData = "Nombre: \(userModel.username), Apellido: \(userModel.lastName), Sueldo: \(userModel.sueldo), Sexo: \(userModel.sex), Pais de residencia: \(userModel.country), EstadoCivil: \(userModel.estadoCivil), Ocupacion: \(userModel.ocupation), Cumpleaños: \(userModel.birthday)"
+            
             if chatBot == 1 {
                 chatBotTitle = "Inversiones"
-                messagePlaceHolder = "Mi monto es de..."
+                messagePlaceHolder = "Como puedo invertir..."
                 chatMessages.append("Server: ¡Hola! Envíame tu monto y elige tu nivel de riesgo para continuar 😎.")
+                nivelDeRiesgo = "BAJO"
             } else if chatBot == 2 {
                 chatBotTitle = "Credito"
                 messagePlaceHolder = "Me podrias explicar..."
                 chatMessages.append("Server: ¡Hola! Resolvamos tus dudas sobre créditos 😎.")
+                userData = userData + ", estaEnBuroDeCredito: \(userModel.creditBuro)"
             } else {
                 chatBotTitle = "Ayuda"
                 messagePlaceHolder = "Necesito ayuda con..."
@@ -97,7 +126,13 @@ struct chatBotView: View {
         
         chatMessages.append("User: \(prompt)")
         
-        let url = URL(string: "https://b5nhsxsx-8000.usw3.devtunnels.ms/chat2/Finanzas")!
+        if nivelDeRiesgo != "" {
+            userData = userData + "Nivel de riesgo: \(nivelDeRiesgo)"
+        } else if chatBot == 3 {
+            chatBotTitle = "Dudas de la app"
+        }
+        
+        let url = URL(string: "https://b5nhsxsx-8000.usw3.devtunnels.ms/chat2/\(chatBotTitle)")!
         
         let boundary = UUID().uuidString
         
@@ -152,6 +187,22 @@ struct chatBotView: View {
 
 struct ServerResponse: Codable {
     let response: String
+}
+
+struct riskButton:View {
+    @Binding var nivelDeRiesgo: String
+    var riesgo: String
+    var body: some View {
+        Button {
+            nivelDeRiesgo = riesgo
+        } label: {
+            Text(riesgo)
+                .frame(width: 107, height: 40)
+                .background(.buttonGray)
+                .clipShape(RoundedRectangle(cornerRadius: 8))
+                .foregroundStyle(nivelDeRiesgo == riesgo ? .black : .accentGray.opacity(0.8))
+        }
+    }
 }
 
 extension Data {
