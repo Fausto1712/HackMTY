@@ -36,7 +36,7 @@ final class UserSettings: ObservableObject {
         self.sex = UserDefaults.standard.string(forKey: "sex") ?? ""
         self.address = UserDefaults.standard.string(forKey: "address") ?? ""
         self.country = UserDefaults.standard.string(forKey: "country") ?? ""
-        self.creditBuro = UserDefaults.standard.bool(forKey: "creditBuro")
+        self.creditBuro = UserDefaults.standard.object(forKey: "creditBuro") as? Bool ?? false
         self.latitude = UserDefaults.standard.integer(forKey: "latitude")
         self.longitude = UserDefaults.standard.integer(forKey: "longitude")
         self.phoneNumb = UserDefaults.standard.integer(forKey: "phoneNumb")

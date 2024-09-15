@@ -95,10 +95,10 @@
 		5791A0A62C961BEF0065C39E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5791A0C02C964BA90065C39E /* ChatView */,
 				5791A0AA2C961D170065C39E /* profileView.swift */,
 				5791A0AC2C961D2C0065C39E /* onBoardingView.swift */,
 				5791A0AE2C961D4A0065C39E /* mainView.swift */,
-				5791A0B02C961D600065C39E /* chatView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -122,6 +122,14 @@
 				5791A0BE2C963DAF0065C39E /* DonutChartModel.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		5791A0C02C964BA90065C39E /* ChatView */ = {
+			isa = PBXGroup;
+			children = (
+				5791A0B02C961D600065C39E /* chatView.swift */,
+			);
+			path = ChatView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

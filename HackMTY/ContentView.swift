@@ -17,12 +17,12 @@ struct ContentView: View {
             TabView {
                 mainView()
                     .tabItem {
-                        Label("Home", systemImage: "house.fill")
+                        Label("Main", systemImage: "house.fill")
                     }
                 
                 chatView()
                     .tabItem {
-                        Label("Next Up", systemImage: "party.popper")
+                        Label("Chat Bot", systemImage: "party.popper")
                     }
             }
             .navigationBarBackButtonHidden(true)
