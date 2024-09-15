@@ -27,7 +27,7 @@ struct profileView: View {
         
         Button {
             isOnboardingCompleted = false
-            router.navigate(to: .contentView)
+            router.navigateToRoot()
         } label: {
             Text("Log Out")
         }
