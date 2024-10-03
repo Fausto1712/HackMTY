@@ -178,7 +178,7 @@ struct GastosView: View {
         
         userData = "Nombre: \(userModel.username), Apellido: \(userModel.lastName), Sueldo: \(userModel.sueldo), Sexo: \(userModel.sex), Pais de residencia: \(userModel.country), EstadoCivil: \(userModel.estadoCivil), Ocupacion: \(userModel.ocupation), Cumpleaños: \(userModel.birthday)"
         
-        let url = URL(string: "https://b5nhsxsx-8000.usw3.devtunnels.ms/stats2")!
+        let url = URL(string: "https://3jc8w5qb-8000.usw3.devtunnels.ms/stats2")!
         
         let boundary = UUID().uuidString
         
@@ -234,7 +234,7 @@ struct GastosView: View {
     }
     
     func sendFormData() {
-        let url = URL(string: "https://b5nhsxsx-8000.usw3.devtunnels.ms/chat2/Ahorros")!
+        let url = URL(string: "https://3jc8w5qb-8000.usw3.devtunnels.ms/chat2/Ahorros")!
         userData = userData + ", nivelDeAhorro: \(selectedSegment)"
         let prompt = "Considerando mi nivel de ahorro y la siguiente sugerencia dame opcoines especificas para ahorrar " + (suggestions[selectedDonutName] ?? "")
         

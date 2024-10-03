@@ -129,7 +129,7 @@ struct chatBotView: View {
             chatBotTitle = "Dudas de la app"
         }
         
-        let url = URL(string: "https://b5nhsxsx-8000.usw3.devtunnels.ms/chat2/\(chatBotTitle)")!
+        let url = URL(string: "https://3jc8w5qb-8000.usw3.devtunnels.ms/chat2/\(chatBotTitle)")!
         
         let boundary = UUID().uuidString
         

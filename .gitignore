@@ -1,0 +1,5 @@
+
+Backend/.env
+*.pyc
+/Backend/node_modules/.bin
+/Backend/node_modules
